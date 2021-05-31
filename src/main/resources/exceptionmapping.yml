@@ -1,0 +1,24 @@
+app:
+  name: exception
+  
+spring:
+  mvc:
+    throw-exception-if-no-handler-found: true
+ 
+com:
+  example:
+    exceptionconfig:
+      mapValueasClass:
+        NO_HANDLER_FOUND:
+          message: No handler found for requested Url 
+          statusCode: 404
+      map:
+        NO_HANDLE_FOUND_MESS: No handler found for
+        NO_HANDLER_FOUND_ERRORCODE: 404 
+      list:
+        -
+          message: Ok
+          statusCode: 200
+        - 
+          message: Bad request
+          statusCode: 400
